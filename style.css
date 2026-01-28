@@ -1,0 +1,221 @@
+/* Reset some basic styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #f9fafb;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Container to center content */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  background-color: #004080;
+  color: white;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+nav {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus {
+  color: #ffc107;
+  outline: none;
+}
+
+/* Hamburger menu button for mobile */
+#menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+/* Hero Section */
+#hero {
+  background-color: #0073e6;
+  color: white;
+  padding: 80px 20px 60px;
+  text-align: center;
+}
+
+.hero-content h2 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  background-color: #ffc107;
+  border: none;
+  color: #004080;
+  padding: 15px 30px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #e6ac00;
+  outline: none;
+}
+
+/* Sections */
+.section {
+  background-color: white;
+  margin: 40px 0;
+  padding: 40px 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgb(0 0 0 / 0.05);
+}
+
+.section h2 {
+  text-align: center;
+  color: #004080;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.services-list {
+  list-style: disc inside;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* Contact Form */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px 15px;
+  border: 1.5px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #0073e6;
+  outline: none;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+.form-message {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 600;
+  color: green;
+}
+
+/* Footer */
+footer {
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 700px) {
+  nav {
+    justify-content: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    background-color: #004080;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 180px;
+    display: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+}
